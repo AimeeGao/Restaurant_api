@@ -1,0 +1,16 @@
+*.pyc
+.vscode
+.idea/
+Pipfile.lock
+venv
+migrations
+app/.DS_Store
+
+*.pytest_cache
+app/config/secure.py
+app/libs/dangerous.py
+API_TEST.md
+task.md
+imgs/
+test/
+*/node_modules/
