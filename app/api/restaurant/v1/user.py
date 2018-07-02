@@ -21,7 +21,5 @@ def get_user():
     # g 变量获取User信息
     uid = g.user.uid
     # select * from User where id = uid
-    import pdb
-    pdb.set_trace()
     user = User.query.filter_by(id=uid).first_or_404()
     return jsonify(user)

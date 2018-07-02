@@ -37,7 +37,7 @@ class AdminScope(Scope):
 
 
 class UserScope(Scope):
-    allow_module = ['restaurant_v1.course', 'restaurant_v1.dev', 'developer.receiver']
+    allow_module = ['restaurant_v1.food_order', 'restaurant_v1.menu', 'restaurant_v1.shopping_cart', 'restaurant_v1.order_item']
     forbidden = ['restaurant_v1.user+super_get_user',
                  'restaurant_v1.user+super_delete_user']
 

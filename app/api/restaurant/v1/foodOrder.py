@@ -10,7 +10,7 @@ api = Redprint('food_order')
 @api.route('/<int:uid>', methods=['GET'])
 #@auth.login_required
 def get_food_order(uid):
-    order_info = FoodOrder.get_menu(uid)
+    order_info = FoodOrder.get_order(uid)
     return jsonify(order_info)
     #return 'get_food'
 

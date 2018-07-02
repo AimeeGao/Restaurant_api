@@ -10,5 +10,10 @@ class Menu(Base, MixinModelJSONSerializer):
     name = Column(String(24), unique=True, nullable=False)
     price = Column(Float(10,2), nullable=False)
     description = Column(String(256))
+    num = Column(Integer)
     #_img = Column('img', String(64))
 
+# 将用户点的菜添加到菜单列表中 (GET)
+
+
+# 获取添加数据后的菜单列表 (GET)
