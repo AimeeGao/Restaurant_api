@@ -287,3 +287,4 @@ INFLUX_DATABASE = 'watcher'
 # restaurant_api
 # restaurant_api
 # Restaurant_api
+# Restaurant_api
