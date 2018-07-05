@@ -1,6 +1,3 @@
-"""
- Created by 七月 on 2018/5/11.
-"""
 from sqlalchemy import Column, Integer, String, SmallInteger
 from werkzeug.security import generate_password_hash, check_password_hash
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
@@ -73,8 +70,7 @@ class User(Base, MixinModelJSONSerializer):
 
 
 
-
-        """class User(Base, MixinModelJSONSerializer):
+    """class User(Base, MixinModelJSONSerializer):
     __bind_key__ = 'persona'
     id = Column(Integer, primary_key=True)
     email = Column(String(24), unique=True, nullable=False)

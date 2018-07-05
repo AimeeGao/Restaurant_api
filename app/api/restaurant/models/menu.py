@@ -11,9 +11,14 @@ class Menu(Base, MixinModelJSONSerializer):
     price = Column(Float(10,2), nullable=False)
     description = Column(String(256))
     num = Column(Integer)
-    #_img = Column('img', String(64))
+    _img = Column('img', String(64))
 
-# 将用户点的菜添加到菜单列表中 (GET)
+    @property
+    def img(self):
+        return url_for('web/static', filename=self._img)
+
+    @img.setter
+    def img(self, filename):
+        self._img = filename
 
 
-# 获取添加数据后的菜单列表 (GET)

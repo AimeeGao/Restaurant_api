@@ -6,19 +6,33 @@ from flask import jsonify, g
 
 api = Redprint('order_item')
 
-# 将用户购物车中的信息添加到order_item表中
-@api.route('/<int:cid>', methods=['GET'])
-@auth.login_required
-def add_cart_item_2_order_item(cid):
-    uid = g.user.uid
-    add_order_item = OrderItem.add_shopping_cart_item_2_order_item(uid, cid)
-    return jsonify(add_order_item)
+# orderitem 前端传来的数据格式
+# [{
+#     "user_id":1,
+#     "menu_id":1
+#   },
+#   {
+#     "user_id":2,
+#     "menu_id":2
+#   }
 
-# 获取点餐详情
-@api.route('', methods=['GET'])
-@auth.login_required
-def get_order_item():
-    uid = g.user.uid
-    get_order_item = OrderItem.get_order_item_info(uid)
-    return jsonify(get_order_item)
+
+#  ]
+
+
+# *** orderItem表中的信息应与FoodOrder表一起生成 同一个transaction ***
+#@api.route('/<int:mid>', methods=['GET'])
+#@auth.login_required
+# def generate_order_item(mid):
+#     uid = g.user.uid
+#     add_order_item = OrderItem.generate_order_item_info(uid, mid)
+#     return jsonify(add_order_item)
+
+# 获取该用户的点餐详情
+# @api.route('', methods=['GET'])
+# @auth.login_required
+# def get_order_item():
+#     uid = g.user.uid
+#     get_order_item = OrderItem.get_order_item_info(uid)
+#     return jsonify(get_order_item)
 

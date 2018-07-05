@@ -1,6 +1,3 @@
-"""
- Created by 七月 on 2018/5/7.
-"""
 from flask import Flask as _Flask
 from flask.json import JSONEncoder as _JSONEncoder
 import json

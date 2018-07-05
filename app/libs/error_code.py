@@ -65,49 +65,10 @@ class Forbidden(APIException):
     msg = 'forbidden, not in scope'
 
 
-class EmailException(APIException):
-    code = 400
-    error_code = 10027
-    msg = 'send mail error'
-
-
-class AppKeyExitException(APIException):
-    code = 400
-    msg = 'you have applied appkey'
-    error_code = 10028
-
-
-class LegalVerifyException(APIException):
-    code = 400
-    msg = 'verify failed'
-    error_code = 10029
-
-
-class UserNotExistException(APIException):
-    code = 400
-    msg = 'user is not exist'
-    error_code = 20001
-
-
-class CourseNotExistException(APIException):
-    code = 400
-    msg = 'course is not exist'
-    error_code = 30001
-
-
-class ImoocBuyerVerifyException(APIException):
-    code = 400
-    msg = 'not imooc buyer'
-    error_code = 20002
-
-
 class PasswordCheckException(APIException):
     code = 401
     msg = 'password check failed'
     error_code = 20003
 
 
-class MuidDuplicateException(APIException):
-    code = 401
-    msg = 'muid duplicate'
-    error_code = 20004
+

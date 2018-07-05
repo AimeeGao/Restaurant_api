@@ -23,3 +23,9 @@ def get_user():
     # select * from User where id = uid
     user = User.query.filter_by(id=uid).first_or_404()
     return jsonify(user)
+
+@api.route('/get/<int:uid>', methods=['GET'])
+#@auth.login_required
+def get_user_id(uid):
+    user_id = User.get_uid(uid)
+    return jsonify(user_id)
